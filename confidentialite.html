@@ -40,7 +40,7 @@
 
   <section class="contenu">
     <div class="enveloppe">
-      <p class="date-maj">Dernière mise à jour&nbsp;: 23 septembre 2026</p>
+      <p class="date-maj">Dernière mise à jour&nbsp;: 18 novembre 2026</p>
 
       <h2>Qui nous sommes</h2>
       <p>Économia est une application mobile de finances personnelles destinée au public québécois, exploitée depuis le Québec, Canada. Pour toute question relative à cette politique ou à vos renseignements personnels, écrivez à <a href="mailto:contact@economia.ca">contact@economia.ca</a>.</p>
@@ -54,8 +54,18 @@
       <p>Les transactions que vous ajoutez&nbsp;: marchand, montant, catégorie, date, nom du produit, ainsi que les objectifs d'épargne et les paramètres de budget que vous configurez. Ces renseignements viennent de vous, par scan ou par saisie manuelle.</p>
 
       <h3>Photos de reçus</h3>
-      <p>Lorsque vous scannez un reçu, la photo est transmise à notre serveur pour être analysée, puis à un fournisseur d'intelligence artificielle (voir la section suivante) afin d'en extraire le marchand, le montant, la date et la catégorie.</p>
-      <p><strong>L'image du reçu n'est pas conservée.</strong> Elle est traitée le temps de l'analyse, puis elle disparaît&nbsp;: Économia ne dispose d'aucun espace de stockage de fichiers et n'archive donc aucune photo. Seules les données extraites — marchand, montant, date, catégorie — sont enregistrées dans votre compte.</p>
+      <p>Lorsque vous scannez un reçu ou que vous en joignez un à une dépense, Économia peut en garder une photo pour que vous la retrouviez plus tard.</p>
+      <ul>
+        <li><strong>Où elles sont gardées.</strong> Les photos sont stockées chez Supabase, notre hébergeur, au Canada (région de Montréal), dans un espace privé. Elles ne sont ni publiques ni visibles par les autres utilisateurs.</li>
+        <li><strong>Une copie allégée.</strong> Nous gardons une version réduite de la photo (environ 150&nbsp;Ko), assez nette pour lire le reçu, et non l'image d'origine.</li>
+        <li><strong>Analyse par l'IA.</strong> Lorsque vous <em>scannez</em> un reçu, la photo est envoyée à Anthropic, qui la traite aux États-Unis pour lire le magasin, les articles et les montants (voir «&nbsp;Anthropic — fonctions d'intelligence artificielle&nbsp;» plus bas, notamment pour le consentement). Lorsque vous <em>joignez</em> simplement une photo à une dépense, elle n'est pas envoyée à l'IA.</li>
+        <li><strong>Ce que vous voyez selon votre forfait.</strong> Avec le forfait Gratuit, vous voyez les photos gardées dans les 30&nbsp;derniers jours. Les plus anciennes ne sont pas effacées&nbsp;: elles sont seulement masquées et redeviennent visibles avec Premium. Vous pouvez demander leur effacement en nous écrivant, ou les effacer toutes en supprimant votre compte. Avec Premium, vous voyez toutes vos photos.</li>
+        <li><strong>Vous pouvez les supprimer.</strong> Vous pouvez supprimer à tout moment une photo que vous voyez, depuis le détail de la dépense. La dépense reste, seule la photo est effacée. Si vous supprimez une dépense, sa photo est effacée aussi.</li>
+        <li><strong>À la suppression de votre compte</strong>, toutes vos photos de reçus sont effacées, en même temps que vos autres données.</li>
+      </ul>
+
+      <h3>Étiquette «&nbsp;Pour mes impôts&nbsp;»</h3>
+      <p>Vous pouvez marquer une dépense «&nbsp;Pour mes impôts&nbsp;» (frais médicaux, dons, dépenses d'entreprise) et exporter ces reçus en PDF ou en CSV. C'est une aide pour retrouver vos reçus, et non un conseil fiscal&nbsp;: Économia ne vous dit pas ce que vous pouvez déclarer. Vérifiez-le auprès de l'Agence du revenu du Canada ou de Revenu Québec.</p>
 
          <h3>Données de plantage</h3>
 
@@ -74,7 +84,7 @@
       <p>Économia s'appuie sur les services suivants pour fonctionner. Chacun est lié par ses propres engagements de confidentialité.</p>
 
       <h3>Supabase — hébergement et base de données</h3>
-      <p>Votre compte, vos transactions et vos paramètres sont stockés dans une base de données Supabase. L'accès est protégé par des règles de sécurité au niveau des lignes&nbsp;: un compte ne peut lire que ses propres données. Supabase agit à titre de sous-traitant pour l'hébergement.</p>
+      <p>Votre compte, vos transactions et vos paramètres sont stockés dans une base de données Supabase, et vos photos de reçus dans un espace de stockage privé Supabase. L'accès est protégé par des règles de sécurité au niveau des lignes&nbsp;: un compte ne peut lire que ses propres données. Supabase agit à titre de sous-traitant pour l'hébergement.</p>
 
       <h3>Anthropic — fonctions d'intelligence artificielle</h3>
       <p>Les photos de reçus, les descriptions de produits, vos questions au Coach avec l'historique de vos échanges, et vos données de budget (revenu, objectif d'épargne, transactions récentes, dépenses fixes, projets d'épargne) sont envoyés à l'API d'Anthropic (Claude) pour produire le résultat que vous demandez. Ces envois n'ont lieu qu'après votre consentement explicite, que vous pouvez retirer à tout moment depuis votre profil. Anthropic indique ne pas utiliser les données envoyées par son API pour entraîner ses modèles.</p>
@@ -96,7 +106,7 @@
       <p>Nous ne vendons pas vos renseignements personnels. Nous ne les échangeons pas et nous ne les communiquons à personne à des fins publicitaires.</p>
 
       <h2>Conservation</h2>
-      <p>Vos données sont conservées tant que votre compte est actif. Lorsque vous demandez la suppression de votre compte, le compte et les transactions qui y sont associées sont effacés définitivement.</p>
+      <p>Vos données sont conservées tant que votre compte est actif. Lorsque vous demandez la suppression de votre compte, le compte ainsi que les transactions et les photos de reçus qui y sont associées sont effacés définitivement.</p>
 
       <h2>Vos droits</h2>
       <p>Conformément à la <em>Loi sur la protection des renseignements personnels dans le secteur privé</em> du Québec (loi&nbsp;25) et aux lois applicables, vous pouvez&nbsp;:</p>
